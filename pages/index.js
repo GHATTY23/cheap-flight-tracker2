@@ -10,7 +10,7 @@ export default function FlightTracker() {
   const fetchFlights = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/api/mockFlights");
+      const response = await axios.get("/api/mockflights");
       const cheapFlights = response.data.filter(flight => flight.price <= alertThreshold);
       setFlights(cheapFlights);
     } catch (error) {
